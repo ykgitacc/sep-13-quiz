@@ -1,0 +1,45 @@
+1)  CREATE or REPLACE procedure EmpBonus(eid IN integer)
+  is
+     esalary employees.salary%TYPE;
+ begin
+    select salary+500 into esalary from employees where employee_id=eid;
+    dbms_output.put_line(esalary);
+ end;
+
+
+ Begin
+ EmpBonus(200);
+ end;
+
+
+2)
+
+create or replace procedure emp bonus(emp_id IN integer)
+
+is
+
+ebonus number;
+
+jid varchar(10);
+
+begin
+
+select job id into jid from employees where employee_id=emp_id; if jid like 'IT PROG' then
+
+select salary+1000 INTO ebonus from employees where employee_id = emp_id; elsif jid like 'SA REP' THEN select salary+700 INTO ebonus from employees where employee_id = emp_id;
+
+else select salary INTO ebonus from employees where employee_id = emp_id; dbms_output.put_line(NO BONUS);
+
+end if;
+
+dbms_output.put_line(ebonus);
+
+end;
+
+begin
+
+emp_bonus(105);
+
+I
+
+end;
